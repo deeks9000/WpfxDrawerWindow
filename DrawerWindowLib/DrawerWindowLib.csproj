@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>enable</ImplicitUsings>
+		
+		<AssemblyName>WpfxCustomControls.DrawerWindow</AssemblyName>
+		<PackageId>WpfxCustomControls.DrawerWindow</PackageId>
+		<PackageVersion>0.1.0-alpha.1</PackageVersion>
+		<Title>DrawerWindow</Title>
+		<Authors>deeks9000</Authors>
+		<Description>DrawerWindow custom control, built entirely in C# with WPFX code-first framework</Description>
+		<PackageProjectUrl>https://github.com/deeks9000/WpfxDrawerWindow</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/deeks9000/WpfxDrawerWindow</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>csharp;dotnet;wpf;windows;code-first</PackageTags>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="UserExtensions.Wpfx" Version="0.1.0-alpha.10" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="../README.md" Pack="true" PackagePath="/" />
+		<None Include="../LICENSE" Pack="true" PackagePath="/" />
+	</ItemGroup>
+
+</Project>

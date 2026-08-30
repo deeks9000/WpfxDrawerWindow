@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DrawerWindowLib/DrawerWindowLib.csproj"  />
+  <Project Path="Demo_DrawerWindow/Demo_DrawerWindow.csproj" DefaultStartup="true" />
+</Solution>
