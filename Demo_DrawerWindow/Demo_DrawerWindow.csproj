@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="UserExtensions.Wpfx" Version="0.1.0-alpha.10" />
+    <PackageReference Include="UserExtensions.Wpfx" Version="0.1.0-alpha.12" />
   </ItemGroup>
 
   <ItemGroup>

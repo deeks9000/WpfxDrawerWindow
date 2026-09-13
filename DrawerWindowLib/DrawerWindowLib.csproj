@@ -8,7 +8,7 @@
 		
 		<AssemblyName>WpfxCustomControls.DrawerWindow</AssemblyName>
 		<PackageId>WpfxCustomControls.DrawerWindow</PackageId>
-		<PackageVersion>0.1.0-alpha.1</PackageVersion>
+		<PackageVersion>0.1.0-alpha.2</PackageVersion>
 		<Title>DrawerWindow</Title>
 		<Authors>deeks9000</Authors>
 		<Description>DrawerWindow custom control, built entirely in C# with WPFX code-first framework</Description>
@@ -24,7 +24,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="UserExtensions.Wpfx" Version="0.1.0-alpha.10" />
+	  <PackageReference Include="UserExtensions.Wpfx" Version="0.1.0-alpha.12" />
 	</ItemGroup>
 
 	<ItemGroup>

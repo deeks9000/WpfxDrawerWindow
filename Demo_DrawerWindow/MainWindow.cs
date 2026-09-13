@@ -48,7 +48,7 @@ public class MainWindow : DrawerWindow
 
                         x.SetBinding(Button.IsEnabledProperty, BindingX(b => {
                             b.Source = this;
-                            b.Path = new PropertyPath(nameof(DrawerWindow.IsDrawerClosed));
+                            b.Path = PropertyPathX(nameof(DrawerWindow.IsDrawerClosed));
                             b.Mode = BindingMode.OneWay;
                         }));
 

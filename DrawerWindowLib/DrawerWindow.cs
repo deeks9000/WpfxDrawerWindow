@@ -28,7 +28,7 @@ public class DrawerWindow : Window
     {
         DefaultStyle = BuildDefaultStyle();
 
-        StyleProperty.OverrideMetadata(typeof(DrawerWindow), new FrameworkPropertyMetadata(DefaultStyle));        
+        StyleProperty.OverrideMetadata(typeof(DrawerWindow), new FrameworkPropertyMetadata(DefaultStyle));
     }
 
     private static Style BuildDefaultStyle()
@@ -37,8 +37,8 @@ public class DrawerWindow : Window
             name: "PART_Root",
             setters: [
                 SetterX(Panel.BackgroundProperty, BindingX(b => {
-                    b.Path = new PropertyPath(nameof(Control.Background));
-                    b.RelativeSource = new RelativeSource(RelativeSourceMode.TemplatedParent);
+                    b.Path = PropertyPathX(nameof(Control.Background));
+                    b.RelativeSource = RelativeSourceX(RelativeSourceMode.TemplatedParent);
                     b.TargetNullValue = Brushes.Transparent;
                 }))
             ],
@@ -46,38 +46,38 @@ public class DrawerWindow : Window
                 FrameworkElementFactoryX<ContentPresenter>(
                     name: "PART_Presenter",
                     setters: [
-                        SetterX(ContentPresenter.ContentSourceProperty, "Content")
+                        SetterX(ContentPresenter.ContentSourceProperty, nameof(DrawerWindow.Content))
                     ]
                 ),
                 FrameworkElementFactoryX<Grid>(
                     name: "PART_Drawer",
                     setters: [
                         SetterX(Panel.BackgroundProperty, BindingX(b => {
-                            b.Path = new PropertyPath(nameof(DrawerWindow.DrawerBackground));
-                            b.RelativeSource = new RelativeSource(RelativeSourceMode.TemplatedParent);
+                            b.Path = PropertyPathX(nameof(DrawerWindow.DrawerBackground));
+                            b.RelativeSource = RelativeSourceX(RelativeSourceMode.TemplatedParent);
                         })),
                         SetterX(FrameworkElement.WidthProperty, BindingX(b => {
-                            b.Path = new PropertyPath(nameof(DrawerWindow.DrawerWidth));
-                            b.RelativeSource = new RelativeSource(RelativeSourceMode.TemplatedParent);
+                            b.Path = PropertyPathX(nameof(DrawerWindow.DrawerWidth));
+                            b.RelativeSource = RelativeSourceX(RelativeSourceMode.TemplatedParent);
                         })),
                         SetterX(FrameworkElement.HeightProperty, BindingX(b => {
-                            b.Path = new PropertyPath(nameof(DrawerWindow.DrawerHeight));
-                            b.RelativeSource = new RelativeSource(RelativeSourceMode.TemplatedParent);
+                            b.Path = PropertyPathX(nameof(DrawerWindow.DrawerHeight));
+                            b.RelativeSource = RelativeSourceX(RelativeSourceMode.TemplatedParent);
                         })),
                         SetterX(FrameworkElement.HorizontalAlignmentProperty, BindingX(b => {
-                            b.Path = new PropertyPath(nameof(DrawerWindow.DrawerHorizontalAlignment));
-                            b.RelativeSource = new RelativeSource(RelativeSourceMode.TemplatedParent);
+                            b.Path = PropertyPathX(nameof(DrawerWindow.DrawerHorizontalAlignment));
+                            b.RelativeSource = RelativeSourceX(RelativeSourceMode.TemplatedParent);
                         })),
                         SetterX(FrameworkElement.VerticalAlignmentProperty, BindingX(b => {
-                            b.Path = new PropertyPath(nameof(DrawerWindow.DrawerVerticalAlignment));
-                            b.RelativeSource = new RelativeSource(RelativeSourceMode.TemplatedParent);
+                            b.Path = PropertyPathX(nameof(DrawerWindow.DrawerVerticalAlignment));
+                            b.RelativeSource = RelativeSourceX(RelativeSourceMode.TemplatedParent);
                         })),
                     ],
                     children: [
                         FrameworkElementFactoryX<ContentPresenter>(
                             name: "PART_DrawerPresenter",
                             setters: [
-                                SetterX(ContentPresenter.ContentSourceProperty, "DrawerContent")
+                                SetterX(ContentPresenter.ContentSourceProperty, nameof(DrawerWindow.DrawerContent))
                             ]
                         )
                     ]
