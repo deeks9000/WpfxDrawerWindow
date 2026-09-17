@@ -88,8 +88,6 @@ namespace Demo_DrawerWindow;
 
 public class MainWindow : DrawerWindow
 {
-    private Button? _button;
-
     public MainWindow()
     {
         Title = "Demo DrawerWindow";

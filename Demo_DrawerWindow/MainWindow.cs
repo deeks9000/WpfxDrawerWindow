@@ -9,8 +9,6 @@ namespace Demo_DrawerWindow;
 
 public class MainWindow : DrawerWindow
 {
-    private Button? _button;
-
     public MainWindow()
     {
         Title = "Demo DrawerWindow";
@@ -38,14 +36,12 @@ public class MainWindow : DrawerWindow
                 ),
                 ButtonX(
                     configure: x => {
-                        _button = x;
                         x.Content = "Click to Open drawer";
                         x.FontSize = 16;
                         x.HorizontalAlignment = HorizontalAlignment.Center;
                         x.VerticalAlignment = VerticalAlignment.Center;
                         x.Padding = ThicknessX(10);
                         x.Margin = ThicknessX(10);
-
                         x.SetBinding(Button.IsEnabledProperty, BindingX(b => {
                             b.Source = this;
                             b.Path = PropertyPathX(nameof(DrawerWindow.IsDrawerClosed));
